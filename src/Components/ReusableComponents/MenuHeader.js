@@ -30,7 +30,7 @@ const MenuHeader = (userid) => {
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify(),
     };
-    fetch(`http://127.0.0.1:8000/api/user/${userid}`)
+    fetch(`https://rasayanudyog.co.in/api/user/${userid}`)
       .then((res) => res.json())
       .then((json) => setEntry(json));
   }, []);

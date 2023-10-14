@@ -32,7 +32,7 @@ const PlantNow = () => {
             headers: {'Content-Type': 'application/json'}, 
             body: JSON.stringify()
         };
-        fetch("http://127.0.0.1:8000/api/displayloc",requestOptions)
+        fetch("https://rasayanudyog.co.in/api/displayloc",requestOptions)
         .then((res) => res.json())
         .then((json) => setEntry(json))
        

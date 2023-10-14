@@ -43,11 +43,11 @@ const PlantDetailsLadakh = () => {
         headers: {'Content-Type': 'application/json'}, 
         body: JSON.stringify()
     };
-    fetch("http://127.0.0.1:8000/api/displaylocbyid/3")
+    fetch("https://rasayanudyog.co.in/api/displaylocbyid/3")
     .then((res) => res.json())
     .then((json) => setEntry(json))
 
-    fetch("http://127.0.0.1:8000/api/plantdeetdisplay/3", requestOptions)
+    fetch("https://rasayanudyog.co.in/api/plantdeetdisplay/3", requestOptions)
     .then((res) => res.json())
     .then((data) => setcurrententry(data?.result));
    
@@ -85,7 +85,7 @@ function handleSubmit()
         body: JSON.stringify(form),
       };
 
-      fetch("http://127.0.0.1:8000/api/newplantdeet", requestOptions)
+      fetch("https://rasayanudyog.co.in/api/newplantdeet", requestOptions)
         .then((response) => response.json())
         .then((data) => setplantid(data?.result?.id));
     }
@@ -110,7 +110,7 @@ function handleSubmit()
           body: JSON.stringify( form )
       };
     
-      fetch('http://127.0.0.1:8000/api/createcart', requestOptions)
+      fetch('https://rasayanudyog.co.in/api/createcart', requestOptions)
       .then(response => response.json())
       .then(data => console.log("cart",data));
     

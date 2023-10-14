@@ -124,7 +124,7 @@ const Login = () => {
       body: JSON.stringify(form),
     };
 
-    fetch("http://127.0.0.1:8000/api/login", requestOptions)
+    fetch("https://rasayanudyog.co.in/api/login", requestOptions)
       .then((response) => response.json())
       .then((data) => {setloginstatus(data?.status);setuserentry(data)}
       // data?.status === "success"
@@ -180,7 +180,7 @@ const Login = () => {
       body: JSON.stringify(form),
     };
 
-    fetch("http://127.0.0.1:8000/api/register", requestOptions)
+    fetch("https://rasayanudyog.co.in/api/register", requestOptions)
       .then((response) => response.json())
       .then((data) => setsignupstatus(data?.status));
   }

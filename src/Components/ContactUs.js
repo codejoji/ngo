@@ -43,7 +43,7 @@ const ContactUs = () => {
             body: JSON.stringify( form )
         };
 
-        fetch('http://127.0.0.1:8000/api/newcontact', requestOptions)
+        fetch('https://rasayanudyog.co.in/api/newcontact', requestOptions)
         .then(response => response.json())
         .then(data =>  alert("We will contact you soon"))
     }

@@ -62,7 +62,7 @@ const Cart = () => {
           },
           body: JSON.stringify(form),
         };
-        fetch("http://127.0.0.1:8000/api/paymentDetails", requestOptions)
+        fetch("https://rasayanudyog.co.in/api/paymentDetails", requestOptions)
           .then((response) => response.json())
           .then((data) => handleDeleteall());
       },
@@ -157,15 +157,15 @@ const Cart = () => {
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify(),
     };
-    fetch(`http://127.0.0.1:8000/api/displaycart/${nm.user.id}`)
+    fetch(`https://rasayanudyog.co.in/api/displaycart/${nm.user.id}`)
       .then((res) => res.json())
       .then((json) => setEntry(json));
 
-    fetch("http://127.0.0.1:8000/api/plantdeetdisplay")
+    fetch("https://rasayanudyog.co.in/api/plantdeetdisplay")
       .then((res) => res.json())
       .then((json) => setplant(json));
 
-    fetch("http://127.0.0.1:8000/api/displaylocwithplant")
+    fetch("https://rasayanudyog.co.in/api/displaylocwithplant")
       .then((res) => res.json())
       .then((json) => setloc(json));
   }, []);
@@ -218,7 +218,7 @@ const Cart = () => {
       },
     };
 
-    fetch(`http://127.0.0.1:8000/api/cart/delete/${deetid}`, requestOptions)
+    fetch(`https://rasayanudyog.co.in/api/cart/delete/${deetid}`, requestOptions)
       .then((response) => response.json())
       .then((data) => handleDelete2(deetid));
   }
@@ -232,7 +232,7 @@ const Cart = () => {
       },
     };
     fetch(
-      `http://127.0.0.1:8000/api/plantdetail/delete/${deetid}`,
+      `https://rasayanudyog.co.in/api/plantdetail/delete/${deetid}`,
       requestOptions
     )
       .then((response) => response.json())
@@ -245,7 +245,7 @@ const Cart = () => {
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify(),
     };
-    fetch("http://127.0.0.1:8000/api/displaylocwithplant")
+    fetch("https://rasayanudyog.co.in/api/displaylocwithplant")
       .then((res) => res.json())
       .then((json) => setloc(json));
   }
@@ -268,7 +268,7 @@ const Cart = () => {
       },
     };
 
-    fetch(`http://127.0.0.1:8000/api/cart/delete`, requestOptions)
+    fetch(`https://rasayanudyog.co.in/api/cart/delete`, requestOptions)
       .then((response) => response.json())
       .then((data) => handleDeleteall2(plantids));
     // handleDeleteall2(data?.result)
@@ -285,7 +285,7 @@ const Cart = () => {
         },
       };
       fetch(
-        `http://127.0.0.1:8000/api/plantdetail/delete/${element}`,
+        `https://rasayanudyog.co.in/api/plantdetail/delete/${element}`,
         requestOptions
       )
         .then((response) => response.json())
@@ -310,7 +310,7 @@ const Cart = () => {
       body: JSON.stringify(form),
     };
     if(loc_id){
-      fetch(`http://127.0.0.1:8000/api/plantdeet/update/${loc_id}`, requestOptions)
+      fetch(`https://rasayanudyog.co.in/api/plantdeet/update/${loc_id}`, requestOptions)
       .then((response) => response.json())
       .then((data) => renderagain())
     }
@@ -330,7 +330,7 @@ const Cart = () => {
       body: JSON.stringify(form),
     };
     if(loc_id){
-      fetch(`http://127.0.0.1:8000/api/plantdeet/update/${loc_id}`, requestOptions)
+      fetch(`https://rasayanudyog.co.in/api/plantdeet/update/${loc_id}`, requestOptions)
       .then((response) => response.json())
       .then((data) => renderagain())
     }
