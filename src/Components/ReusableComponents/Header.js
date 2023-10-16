@@ -59,7 +59,7 @@ const Header = ({ userid }) => {
           <Box style={{ display: "flex", alignItems: "center" }}>
             <Box className="boxheader">
               <Item onClick={() => navigate("/AboutUs")} className="headertags">
-                ABOUT US
+                ABOUT 
               </Item>
             </Box>
             <Box>
