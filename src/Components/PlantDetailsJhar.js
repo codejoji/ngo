@@ -46,7 +46,6 @@ const PlantDetailsJhar = () => {
       .then((data) => setcurrententry(data?.result));
     
   }, []);
-  console.log("entry", entry);
   console.log("entry", entry.result);
   console.log("currententry", currententry);
 
